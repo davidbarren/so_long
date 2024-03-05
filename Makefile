@@ -6,7 +6,7 @@
 #    By: dbarrene <dbarrene@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/18 12:05:08 by dbarrene          #+#    #+#              #
-#    Updated: 2024/03/05 16:32:28 by dbarrene         ###   ########.fr        #
+#    Updated: 2024/03/05 16:54:32 by dbarrene         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,11 +52,11 @@ $(NAME): $(LIBFT) $(OBJS)
 clean:
 	rm -f $(OBJS)
 	make clean -C $(LIBFTPATH)
-	@rm -rf $(LIBMLX)/build
 
 fclean: clean
 	rm -f $(NAME)
 	make fclean -C $(LIBFTPATH)
+	@rm -rf $(LIBMLX)/build
 
 re: fclean libmlx $(NAME)
 
